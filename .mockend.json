@@ -1,0 +1,201 @@
+{
+  "Rota": {
+    "id": {
+      "int": {
+        "min": 1000,
+        "max": 100000
+      }
+    },
+    "motorista": {
+      "int": {
+        "min": 1,
+        "max": 1000
+      }
+    },
+    "numeroRota": {
+      "int": {
+        "min": 1,
+        "max": 50
+      }
+    },
+    "itinerarios": {
+      "hasMany": "Itinerario"
+    },
+    "pedidos": {
+      "hasMany": "Pedidos"
+    }
+  },
+  "Pedidos": {
+    "numeroPedido": {
+      "int": {
+        "min": 1000,
+        "max": 20000
+      }
+    },
+    "prioridade": {
+      "int": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "cliente": {
+      "belongsTo": "Cliente"
+    },
+    "itens": {
+      "hasMany": "Itens"
+    },
+    "statusPedido": {
+      "string": [
+        "Em transito",
+        "Finalizado",
+        "Cancelado",
+        "Nenhum Status"
+      ]
+    }
+  },
+  "Cliente": {
+    "codigo": {
+      "int": {
+        "min": 100,
+        "max": 500
+      }
+    },
+    "nome": {
+      "loremSentences": {
+        "minLength": 20,
+        "maxLength": 60
+      }
+    },
+    "email": {
+      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    },
+    "telefone": {
+      "regexp": "199[0-9]{8}"
+    }
+  },
+  "Itens": {
+    "codigo": {
+      "int": {
+        "min": 1500,
+        "max": 15000
+      }
+    },
+    "descricao": {
+      "loremSentences": {
+        "minLength": 20,
+        "maxLength": 45
+      }
+    },
+    "quantidade": {
+      "int": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "valorUnitario": {
+      "int": [
+        125.00
+      ]
+    },
+    "valorTotal": {
+      "int": [
+        1240.00
+      ]
+    }
+  },
+  "Itinerario": {
+    "id": {
+      "int": {
+        "min": 0,
+        "max": 1000000
+      }
+    },
+    "sequencia": {
+      "int": {
+        "min": 0,
+        "max": 1000000
+      }
+    },
+    "rota": {
+      "belongsTo": "Rota"
+    },
+    "Endereco": {
+      "belongsTo": "Endereco"
+    }
+  },
+  "Endereco": {
+    "id": {
+      "int": {
+        "min": 0,
+        "max": 1000000
+      }
+    },
+    "enderecoCompleto": {
+      "loremSentences": {
+        "minLength": 100,
+        "maxLength": 200
+      }
+    },
+    "logradouro": {
+      "string": [
+        "Rua Joaquim Martins",
+        "Av Princesa Romena",
+        "Rua Capitólio dos Querumins",
+        "Rua OnChangeStatus da Silva",
+        "Av Mudança de Casa"
+      ]
+    },
+    "numero": {
+      "int": {
+        "min": 20,
+        "max": 1000
+      }
+    },
+    "complemento": {
+      "loremSentences": {
+        "minLength": 30,
+        "maxLength": 60
+      }
+    },
+    "bairro": {
+      "loremWords": {
+        "minLength": 1,
+        "maxLength": 3
+      }
+    },
+    "cidade": {
+      "loremWords": {
+        "minLength": 1,
+        "maxLength": 2
+      }
+    },
+    "estado": {
+      "string": [
+        "SP"
+      ]
+    },
+    "cep": {
+      "string": [
+        "13200"
+      ]
+    },
+    "latitude": {
+      "string": [
+        "-22.91407482666377",
+        "-22.9294634560943",
+        "-22.896348068260735",
+        "-22.95496164773699",
+        -22.846068109217658
+      ]
+    },
+    "longitude": {
+      "string": [
+        "-47.065159922022545",
+        "-47.11180206725329",
+        "-47.153289104052554",
+        "-46.998421856568605",
+        "-47.19373856291532"
+      ]
+    }
+  }
+}
