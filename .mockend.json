@@ -29,10 +29,23 @@
   },
   "Pedido": {
     "numeroPedido": {
-      "int": {
-        "min": 1000,
-        "max": 20000
-      }
+      "string": [
+        "125",
+        "155",
+        "325",
+        "475",
+        "550",
+        "750"
+      ]
+    },
+    "codigoItinerario": {
+      "string": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ]
     },
     "prioridade": {
       "int": {
@@ -111,6 +124,24 @@
         "min": 0,
         "max": 1000000
       }
+    },
+    "codigoItinerario": {
+      "string": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ]
+    },
+    "distanciaTotalEstimada": {
+      "string": [
+        "20",
+        "25",
+        "35",
+        "45",
+        "65"
+      ]
     },
     "sequencia": {
       "int": {
