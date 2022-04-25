@@ -7,10 +7,12 @@
       }
     },
     "motorista": {
-      "int": {
-        "min": 1,
-        "max": 1000
-      }
+      "int": [
+        100,
+        200,
+        300,
+        400
+      ]
     },
     "numeroRota": {
       "int": {
@@ -22,10 +24,10 @@
       "hasMany": "Itinerario"
     },
     "pedidos": {
-      "hasMany": "Pedidos"
+      "hasMany": "Pedido"
     }
   },
-  "Pedidos": {
+  "Pedido": {
     "numeroPedido": {
       "int": {
         "min": 1000,
@@ -42,7 +44,7 @@
       "belongsTo": "Cliente"
     },
     "itens": {
-      "hasMany": "Itens"
+      "hasMany": "Item"
     },
     "statusPedido": {
       "string": [
@@ -73,7 +75,7 @@
       "regexp": "199[0-9]{8}"
     }
   },
-  "Itens": {
+  "Item": {
     "codigo": {
       "int": {
         "min": 1500,
@@ -129,8 +131,8 @@
     },
     "enderecoCompleto": {
       "loremSentences": {
-        "minLength": 100,
-        "maxLength": 200
+        "minLength": 30,
+        "maxLength": 80
       }
     },
     "logradouro": {
@@ -139,7 +141,8 @@
         "Av Princesa Romena",
         "Rua Capitólio dos Querumins",
         "Rua OnChangeStatus da Silva",
-        "Av Mudança de Casa"
+        "Av Mudança de Casa",
+        "Rua Piletro Amando Sales"
       ]
     },
     "numero": {
@@ -155,16 +158,27 @@
       }
     },
     "bairro": {
-      "loremWords": {
-        "minLength": 1,
-        "maxLength": 3
-      }
+      "string": [
+        "Água Rasa",
+        "Barra Funda",
+        "Carrão",
+        "Nóbrega",
+        "Jardim Santa Angela",
+        "São Cristovão",
+        "Tucuruvi",
+        "Vila Formosa",
+        "Vila Maria"
+      ]
     },
     "cidade": {
-      "loremWords": {
-        "minLength": 1,
-        "maxLength": 2
-      }
+      "string": [
+        "Valinhos",
+        "Vinhedo",
+        "Campinas",
+        "Indaiatuba",
+        "Sumaré",
+        "Nova Odessa"
+      ]
     },
     "estado": {
       "string": [
