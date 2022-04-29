@@ -2,56 +2,37 @@
   "Rota": {
     "id": {
       "int": {
-        "min": 1000,
-        "max": 100000
+        "min": 1,
+        "max": 10000
       }
     },
     "motorista": {
       "int": [
-        100,
-        200,
-        300,
-        400
+        300
       ]
     },
     "numeroRota": {
-      "int": {
-        "min": 1,
-        "max": 50
-      }
+      "int": [
+        45
+      ]
     },
     "itinerarios": {
-      "hasMany": "Itinerario"
+      "belongsTo": "Itinerario"
     },
     "pedidos": {
-      "hasMany": "Pedido"
+      "belongsTo": "Pedido"
     }
   },
   "Pedido": {
     "numeroPedido": {
       "string": [
-        "125",
-        "155",
-        "325",
-        "475",
-        "550",
-        "750"
+        "155"
       ]
     },
     "codigoItinerario": {
       "string": [
-        "10",
-        "20",
-        "30",
-        "40",
-        "50"
+        "20"
       ]
-    },
-    "prioridade": {
-      "int": {
-        "min": 1,
-        "max": 10
-      }
     },
     "cliente": {
       "belongsTo": "Cliente"
@@ -61,25 +42,20 @@
     },
     "statusPedido": {
       "string": [
-        "Em transito",
-        "Finalizado",
-        "Cancelado",
-        "Nenhum Status"
+        "Em transito"
       ]
     }
   },
   "Cliente": {
     "codigo": {
-      "int": {
-        "min": 100,
-        "max": 500
-      }
+      "int": [
+        135
+      ]
     },
     "nome": {
-      "loremSentences": {
-        "minLength": 20,
-        "maxLength": 60
-      }
+      "string": [
+        "Junior da Silva Gorette"
+      ]
     },
     "email": {
       "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
@@ -120,27 +96,18 @@
   },
   "Itinerario": {
     "id": {
-      "int": {
-        "min": 0,
-        "max": 1000000
-      }
+      "int": [
+        675
+      ]
     },
     "codigoItinerario": {
       "string": [
-        "10",
-        "20",
-        "30",
-        "40",
-        "50"
+        "20"
       ]
     },
     "distanciaTotalEstimada": {
-      "string": [
-        "20",
-        "25",
-        "35",
-        "45",
-        "65"
+      "int": [
+        25
       ]
     },
     "sequencia": {
@@ -168,12 +135,7 @@
     },
     "logradouro": {
       "string": [
-        "Rua Joaquim Martins",
-        "Av Princesa Romena",
-        "Rua Capitólio dos Querumins",
-        "Rua OnChangeStatus da Silva",
-        "Av Mudança de Casa",
-        "Rua Piletro Amando Sales"
+        "Rua Joaquim Martins"
       ]
     },
     "numero": {
@@ -190,25 +152,12 @@
     },
     "bairro": {
       "string": [
-        "Água Rasa",
-        "Barra Funda",
-        "Carrão",
-        "Nóbrega",
-        "Jardim Santa Angela",
-        "São Cristovão",
-        "Tucuruvi",
-        "Vila Formosa",
-        "Vila Maria"
+        "Água Rasa"
       ]
     },
     "cidade": {
       "string": [
-        "Valinhos",
-        "Vinhedo",
-        "Campinas",
-        "Indaiatuba",
-        "Sumaré",
-        "Nova Odessa"
+        "Vinhedo"
       ]
     },
     "estado": {
@@ -223,20 +172,12 @@
     },
     "latitude": {
       "string": [
-        "-22.91407482666377",
-        "-22.9294634560943",
-        "-22.896348068260735",
-        "-22.95496164773699",
-        "-22.846068109217658"
+        "-22.91407482666377"
       ]
     },
     "longitude": {
       "string": [
-        "-47.065159922022545",
-        "-47.11180206725329",
-        "-47.153289104052554",
-        "-46.998421856568605",
-        "-47.19373856291532"
+        "-47.065159922022545"
       ]
     }
   }
