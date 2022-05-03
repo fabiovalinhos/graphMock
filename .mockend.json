@@ -34,6 +34,14 @@
         "20"
       ]
     },
+    "observacoes": {
+      "string": [
+        "Levar maquininha e nota"
+      ]
+    },
+    "vendedor": {
+      "belongsTo": "Vendedor"
+    },
     "cliente": {
       "belongsTo": "Cliente"
     },
@@ -43,6 +51,23 @@
     "statusPedido": {
       "string": [
         "Em transito"
+      ]
+    }
+  },
+  "Vendedor": {
+    "nomeCompleto": {
+      "string": [
+        "Antônio da silva Moraes"
+      ]
+    },
+    "apelido": {
+      "string": [
+        "Tonhão"
+      ]
+    },
+    "codigoVendedor": {
+      "int": [
+        3602
       ]
     }
   },
